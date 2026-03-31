@@ -76,11 +76,12 @@ const ScoreTable = ({ mode }: ScoreTableProps) => {
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-secondary border-b border-border">
-              {columnGroups.map((_, ci) => (
-                <th key={`sh-${ci}`} colSpan={2} className="font-display px-2 py-2.5 text-center font-semibold text-primary tracking-wide border-r border-border last:border-r-0 text-xs sm:text-sm">
-                  {mode === "pushup" ? "팔굽혀펴기" : mode === "pullup" ? "턱걸이" : "윗몸일으키기"}
-                </th>
-              ))}
+              <th 
+                colSpan={columnGroups.length * 2} 
+                className="font-display px-2 py-2.5 text-center font-semibold text-primary tracking-wide text-xs sm:text-sm"
+              >
+                {mode === "pushup" ? "팔굽혀펴기" : mode === "pullup" ? "턱걸이" : "윗몸일으키기"}
+              </th>
             </tr>
             <tr className="bg-secondary/80 border-b border-border">
               {columnGroups.map((_, ci) => (
