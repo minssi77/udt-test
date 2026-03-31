@@ -151,7 +151,33 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Status bar hidden as requested */}
+      {/* Status bar */}
+      <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-card">
+        <div className="flex items-center gap-2">
+          <span className="font-display text-sm font-semibold uppercase tracking-wider text-primary glow-olive">
+            {MODE_LABELS[mode].ko}
+          </span>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="font-display text-lg tracking-widest text-muted-foreground tabular-nums">
+            {formatTime(elapsed)}
+          </span>
+          <div className="flex items-center gap-1.5">
+            <div
+              className={`h-2 w-2 rounded-full ${
+                isPlaying && !isPaused
+                  ? "bg-primary animate-pulse-glow"
+                  : isPaused
+                  ? "bg-yellow-500"
+                  : "bg-muted-foreground/40"
+              }`}
+            />
+            <span className="font-body text-xs uppercase tracking-widest text-muted-foreground">
+              {isPlaying && !isPaused ? "진행 중" : isPaused ? "일시정지" : "대기"}
+            </span>
+          </div>
+        </div>
+      </div>
 
       {/* Main: Score Table */}
       <main className="flex-1 overflow-y-auto px-3 py-4 sm:px-6">

@@ -75,14 +75,6 @@ const ScoreTable = ({ mode }: ScoreTableProps) => {
       <div className="overflow-x-auto rounded-md border border-border">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-secondary border-b border-border">
-              <th 
-                colSpan={columnGroups.length * 2} 
-                className="font-display px-2 py-2.5 text-center font-semibold text-primary tracking-wide text-xs sm:text-sm"
-              >
-                {mode === "pushup" ? "팔굽혀펴기" : mode === "pullup" ? "턱걸이" : "윗몸일으키기"}
-              </th>
-            </tr>
             <tr className="bg-secondary/80 border-b border-border">
               {columnGroups.map((_, ci) => (
                 <Fragment key={`h-frag-${ci}`}>
