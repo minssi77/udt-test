@@ -104,6 +104,16 @@ const ScoreTable = ({ mode }: ScoreTableProps) => {
                     const isFail = item && (item.score === "과락" || item.score === "0");
 
                     if (!item) {
+                      const isLastCol = ci === columnGroups.length - 1;
+                      if (isLastCol) {
+                        return (
+                          <td 
+                            key={`e-cell-merged-${ci}`} 
+                            colSpan={2} 
+                            className="px-2 py-2 border-r border-border last:border-r-0" 
+                          />
+                        );
+                      }
                       return (
                         <Fragment key={`e-frag-${ci}`}>
                           <td key={`e1-${ci}`} className="px-2 py-2 border-r border-border last:border-r-0" />
