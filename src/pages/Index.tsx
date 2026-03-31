@@ -152,13 +152,11 @@ const Index = () => {
       </header>
 
       {/* Status bar */}
-      <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-card">
-        <div className="flex items-center gap-2">
-          <span className="font-display text-sm font-semibold uppercase tracking-wider text-primary glow-olive">
-            {MODE_LABELS[mode].ko}
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
+      <div className="relative flex items-center justify-center px-4 py-2 border-b border-border bg-card">
+        <span className="font-display text-sm font-semibold tracking-wider text-primary glow-olive">
+          {MODE_LABELS[mode].ko}
+        </span>
+        <div className="absolute right-4 flex items-center gap-3">
           <span className="font-display text-lg tracking-widest text-muted-foreground tabular-nums">
             {formatTime(elapsed)}
           </span>
