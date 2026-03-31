@@ -155,7 +155,7 @@ const Index = () => {
       <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-card">
         <div className="flex items-center gap-2">
           <span className="font-display text-sm font-semibold uppercase tracking-wider text-primary glow-olive">
-            {MODE_LABELS[mode].en}
+            {MODE_LABELS[mode].ko}
           </span>
         </div>
         <div className="flex items-center gap-3">
@@ -201,7 +201,7 @@ const Index = () => {
                     : "border-border bg-secondary text-muted-foreground hover:border-primary/50 hover:text-foreground"
                 }`}
               >
-                {MODE_LABELS[m].en}
+                {MODE_LABELS[m].ko}
               </button>
             ))}
           </div>
