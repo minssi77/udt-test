@@ -112,19 +112,27 @@ const ScoreTable = ({ mode }: ScoreTableProps) => {
                       );
                     }
 
+                    if (isFail) {
+                      return (
+                        <td
+                          key={`f-cell-${ci}`}
+                          colSpan={2}
+                          className="font-body px-2 py-2 text-center tabular-nums text-destructive font-semibold border-r border-border last:border-r-0"
+                        >
+                          {item.score} {item.reps}
+                        </td>
+                      );
+                    }
+
                     return (
                       <Fragment key={`e-frag-v-${ci}`}>
                         <td
-                          className={`font-body px-2 py-2 text-center tabular-nums ${
-                            isFail ? "text-destructive font-semibold" : "text-foreground"
-                          }`}
+                          className="font-body px-2 py-2 text-center tabular-nums text-foreground"
                         >
                           {item.score}
                         </td>
                         <td
-                          className={`font-body px-2 py-2 text-center tabular-nums border-r border-border last:border-r-0 ${
-                            isFail ? "text-destructive font-semibold" : "text-muted-foreground"
-                          }`}
+                          className="font-body px-2 py-2 text-center tabular-nums border-r border-border last:border-r-0 text-muted-foreground"
                         >
                           {item.reps}
                         </td>
