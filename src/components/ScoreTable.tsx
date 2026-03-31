@@ -129,7 +129,7 @@ const ScoreTable = ({ mode }: ScoreTableProps) => {
                           colSpan={2}
                           className="font-body px-2 py-2 text-center tabular-nums text-destructive font-semibold border-r border-border last:border-r-0"
                         >
-                          {item.score} {item.reps}
+                          {item.score}
                         </td>
                       );
                     }
